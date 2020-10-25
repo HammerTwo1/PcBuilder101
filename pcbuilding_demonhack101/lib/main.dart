@@ -41,6 +41,8 @@ class MyApp extends StatelessWidget {
               Icon(Icons.computer, size: 200,),
               Text("WELCOME TO", style: TextStyle(fontSize: 30),),
               Text("PC BUILDER 101", style: TextStyle(fontSize: 40),),
+              SizedBox(height: 10,),
+              Text("This project is designed to help users build preset computers",style: TextStyle(),),
               SizedBox(
                 height: 200,
                 child: Icon(Icons.arrow_downward,size: 50,),
@@ -51,7 +53,7 @@ class MyApp extends StatelessWidget {
                 },
                 elevation: 5.0,
                 child: Padding(
-                  padding: EdgeInsets.only(left: 70,top: 20, right: 70, bottom: 20),
+                  padding: EdgeInsets.only(left: 70,top: 15, right: 70, bottom: 15),
                   child: Text("Continue", style: TextStyle(),),
                 ),
               ),
