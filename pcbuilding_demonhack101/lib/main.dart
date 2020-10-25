@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pcbuilding_demonhack101/secondscreen.dart';
+
+import 'help.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,40 +30,54 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("PC BUILDER 101"),
-          actions: [
-            IconButton(icon: Icon(Icons.help),),
-          ],
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.computer, size: 200,),
-              Text("WELCOME TO", style: TextStyle(fontSize: 30),),
-              Text("PC BUILDER 101", style: TextStyle(fontSize: 40),),
-              SizedBox(height: 10,),
-              Text("This project is designed to help users build preset computers",style: TextStyle(),),
-              SizedBox(
-                height: 200,
-                child: Icon(Icons.arrow_downward,size: 50,),
-              ),
-              RaisedButton(
-                onPressed: (){
+      home: HomePage()
+    );
+  }
+}
 
-                },
-                elevation: 5.0,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 70,top: 15, right: 70, bottom: 15),
-                  child: Text("Continue", style: TextStyle(),),
-                ),
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("PC BUILDER 101"),
+        actions: [
+          IconButton(icon: Icon(Icons.help),
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => help()));
+          },),
+        ],
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.computer, size: 200,),
+            Text("WELCOME TO", style: TextStyle(fontSize: 30),),
+            Text("PC BUILDER 101", style: TextStyle(fontSize: 40),),
+            SizedBox(height: 10,),
+            Text("This project is designed to help users build preset computers",style: TextStyle(),),
+            SizedBox(
+              height: 200,
+              child: Icon(Icons.arrow_downward,size: 50,),
+            ),
+            RaisedButton(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
               ),
-            ],
-          ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SecondScreen()));
+              },
+              elevation: 5.0,
+              child: Padding(
+                padding: EdgeInsets.only(left: 80,top: 15, right: 80, bottom: 15),
+                child: Text("Continue", style: TextStyle(),),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
+  
 }
