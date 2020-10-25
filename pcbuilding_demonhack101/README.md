@@ -2,15 +2,16 @@
 
 A new Flutter application.
 
-## Getting Started
+## idea
 
-This project is a starting point for a Flutter application.
+It's been too long have people said
+that "PC's are too hard to build"
+and
+"I'm not sure what parts are right for me".
+Look no further to the newly improved, and OPTIMIZED
+PC BUILDER 101 (TM)!
+With this bad boy, you can find the PC preset that's best for you with your budget and lifestyle.
+What are you waiting for?
+GET BUILDING
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

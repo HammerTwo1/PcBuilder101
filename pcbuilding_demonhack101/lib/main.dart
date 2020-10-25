@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -42,9 +43,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("PC BUILDER 101"),
         actions: [
-          IconButton(icon: Icon(Icons.help),
+          IconButton(icon: Icon(Icons.info),
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => help()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => help(),fullscreenDialog: true));
           },),
         ],
       ),
